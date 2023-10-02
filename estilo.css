@@ -84,7 +84,7 @@ a {
     padding: 0.3em;
     cursor: pointer;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .show {
@@ -127,10 +127,10 @@ a {
     max-width: 100%; /* Largura máxima do container de vídeo */
 }
 
-/* Largura máxima do container de vídeo
+/* Largura máxima do container de vídeo */
 .video-container {
-    max-width: 50em; 
-}  */
+    margin: 0;
+}
 
 video {
     width: 100%;
@@ -215,18 +215,6 @@ footer {
     transform: scale(1.5); 
 }
 
-
- 
-.footer_paragrafo{
-    text-decoration: none;
-    color: #ffffff;
-    margin: 0;
-    font-size: 0.8rem;
-    text-align: center; 
-    margin-top: 0.6em; 
-    width: 100%;
-}
-
 footer a:visited {
     color: #ffffff;
 }
@@ -234,12 +222,26 @@ footer a:visited {
 /* Configurações da foto da Seção 1 - Quem sou eu */
 
 .img-foto{
-    float: left;
+    float: right;
     width: 15rem;
     padding: 2em;
     border-radius: 40px; 
 }
 
+
+.img-icone-e{
+    float: left;
+    width: 7em;
+    height: 7em;
+    padding: 1em;
+}
+
+.img-icone-d{
+    float: right;
+    width: 7em;
+    height: 7em;
+    padding: 1em;
+}
 
 /* Configurações da Seção 2 - Como tudo começou, Seção 3 - Desafios Superados, Seção 4 - Conquistas, Seção 5 - Aprendizados */
 
@@ -262,7 +264,6 @@ footer a:visited {
 
 .artigo{
     background-color: var(--azul-claro);
-    padding: 1 em;
     text-align: justify;
     height: 12em;
 }
@@ -272,8 +273,12 @@ footer a:visited {
     background-color: var(--azul-dark);
     color: var(--azul-medio);
     text-align:center;
-    margin: 0 auto 0 auto;
 }
+
+.artigo-cabecalho h3{
+    padding: 0.5em 0 0.5em 0;
+}
+
 
 .img-html{
     float: left;
@@ -344,11 +349,11 @@ footer a:visited {
 
 
 /* Media query para telas menores (exemplo: menos de 768px de largura) */
-@media screen and (max-width: 47em) {
+@media screen and (max-width: 36em) {
     body{
         background: var(--azul-claro);
-    
-    }    
+    }   
+
     .footer {
         flex-direction: column;
         text-align: center; 
@@ -359,7 +364,9 @@ footer a:visited {
         margin: 0.8em 0;
     }
     
-    .img-foto {
+    .img-foto,
+    .img-icone-d,
+    .img-icone-e {
         display: none; /* Oculta a imagem em telas menores */
     }
 
@@ -383,15 +390,13 @@ footer a:visited {
     }
 
     .section7_botao {
-  
-
         display: inline-block; /* Torna o botão um elemento em linha */
         padding: 0.6em 1.2em;
         background-color: #007BFF; 
         color: #fff; 
         text-decoration: none; /* Remove a sublinhado do link */
         border-radius: 5px; /* Adiciona bordas arredondadas */
-        font-size: 1em; /* Tamanho da fonte do texto do botão */
+        font-size: 0.9em; /* Tamanho da fonte do texto do botão */
         font-weight: bold; /* Define a fonte em negrito */
         margin-top: 0.6em; /* Espaçamento superior para separar o botão do texto */
     }
@@ -402,9 +407,7 @@ footer a:visited {
 
     .experiencia {
         text-align: center;
-        padding: 1.2em;
     }
-
 
 
     .section1 h1,
@@ -418,7 +421,7 @@ footer a:visited {
         font-size: 1.8em;
         margin-bottom: 1em;
         color: var(--azul-medio);
-        padding: 0.5em;
+        padding: 1em 0 1em 0;
         height: auto;
         width: 100%;
         text-align: center;
@@ -432,7 +435,7 @@ footer a:visited {
     .section6 p,
     .section7 p,
     .section8 p {
-        font-size: 1em;
+        font-size: 0.9em;
         color: var(--azul-dark);
         height: auto;
         width: 100%;
@@ -463,7 +466,7 @@ footer a:visited {
 
 
 
-@media screen and (min-width:48em){
+@media screen and (min-width:37em){
 
     #hamburguer{
         display: none;
@@ -539,7 +542,7 @@ footer a:visited {
     .section6 p,
     .section7 p,
     .section8 p{
-        font-size: 1em;
+        font-size: 0.9em;
         color: var(--azul-dark);
         text-align: justify;
         padding: 1em;
@@ -549,7 +552,7 @@ footer a:visited {
   
     .section3 p,
     .section4 p{
-        font-size: 1em;
+        font-size: 0.9em;
         color: #ffffff;
         text-align: justify;
         padding: 1em;
