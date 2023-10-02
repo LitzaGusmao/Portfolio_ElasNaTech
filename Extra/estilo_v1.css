@@ -1,0 +1,600 @@
+/* Reset de estilos para uma base limpa */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul-claro:#95c3f4;
+    --azul-medio:#0187fc;
+    --azul-dark:#000080;
+}
+
+html{
+    font-family: 'Lumanosimo', cursive, 'Dancing Script', sans-serif;
+}
+
+
+body{
+    background: linear-gradient(to right, #000080, #000080, #0187fc, #95c3f4);
+
+}
+
+.maxWidth{
+    max-width: 90em; /*1440px*/
+}
+
+.header{
+    text-align: center;
+    margin: 0 auto; /* Limpa as margens anteriores */
+}
+
+.header_logo{
+    width: 5.9em;
+    height: 100%;
+    margin: 1em;
+    border-radius: 50%;
+}
+
+.header_nav{
+    background-color: var(--azul-claro);
+    display: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.header_nav.show{
+    display: block;
+}
+
+ul{
+    margin: 0;
+}
+
+.header_nav ul{
+    list-style-type: none;
+    padding: 0;
+    letter-spacing: 0.1em;
+}
+
+.header_nav a{
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    font-size: .6rem;
+}
+
+
+.header_nav a:hover{
+    background-color: var(--azul-medio);
+    color: var(--azul-dark);
+}
+
+
+a {
+    color: var (var(--azul-claro));
+    font-size: .4em;
+}
+
+
+#hamburguer{
+    background-color: var(--azul-dark);
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    padding: 0.3em;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.show {
+    display: block;
+}
+
+
+/* Estilos para garantir que o container dos cards ocupe toda a largura */
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilos para cada artigo */
+article {
+    position: relative; /* Define a posição do artigo como relativa */
+    margin-bottom: 20px; /* Espaçamento entre os cards */
+}
+
+
+.main_botao{
+    display: block;
+    margin-top: auto;
+    padding: 1em 2em;
+    background-color: var(--azul-claro);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--azul-dark);
+    text-transform: uppercase;
+
+    position: relative;
+    bottom: 1px; /* Ajuste aqui a distância do botão em relação ao final do artigo */
+    left: 50%; /* Centraliza horizontalmente o botão no artigo */
+    transform: translateX(-50%); /* Ajuste para centralizar corretamente */
+    text-align: center;
+
+    width: 100%;
+    max-width: 200px;
+
+}
+
+.main_botao:hover{
+    background-color: color-mix(in srgb, #000080, #ffffff 20%);
+}
+
+
+ /* Estilos gerais para o vídeo */
+ .iframeContainer {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 (para vídeos responsivos) */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    max-width: 800px; /* Largura máxima do contêiner de vídeo */
+}
+
+.video-container {
+    max-width: 800px; /* Largura máxima do contêiner de vídeo */
+}
+
+video {
+    width: 100%;
+    height: auto;}
+
+
+
+.iframeContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Media query para telas menores (exemplo: menos de 768px de largura) */
+@media screen and (max-width: 47em) {
+    .footer {
+        flex-direction: column; /* Mude de volta para coluna em telas menores */
+        text-align: center; /* Centralize o texto */
+        align-items: center; /* Alinhe horizontalmente os ícones e o texto */
+    }
+
+    .social-icon {
+        margin: 10px 0; /* Adicione margem superior e inferior para separar os ícones */
+    }
+    
+    .section7_botao {
+        display: block; /* Torna o botão visível em telas menores */
+    }
+
+    .iframeContainer {
+        display: none; /* Oculta o vídeo em telas menores */
+    }
+
+    .section1 h1,
+    .section2 h1,
+    .section3 h1,
+    .section4 h1,
+    .section5 h1,
+    .section6 h1,
+    .section7 h1,
+    .section8 h1 {
+        font-size: 1.8em;
+        margin-bottom: 1em;
+        color: #0187fc;
+        padding: 0.5em;
+    }
+    
+    .section1 p,
+    .section2 p,
+    .section3 p,
+    .section4 p,
+    .section5 p,
+    .section6 p,
+    .section7 p,
+    .section8 p {
+        font-size: 1em;
+        color: #ffffff;
+    }
+
+    .col-12{
+        width: 100%;
+    }
+}
+
+
+.section7_botao{     /* Estilos para telas de celular */
+    display: block;
+    margin-top: 1em;
+    padding: 1em 2em;
+    background-color: var(--azul-claro);
+    border-radius: 8px;
+    text-decoration: none;
+    color:var(--azul-dark);
+    text-transform: uppercase;
+}
+
+.section7_botao:hover{
+    background-color: color-mix(in srgb, #95c3f4, #ffffff 20%);
+}
+
+
+@media screen and (min-width:48em){
+    .col-md-6{
+        width: calc(50% - 2rem);
+    }
+    #hamburguer{
+        display: none;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--azul-dark);
+    }
+
+    .header_logo{
+        text-align: left; /* Alinha à esquerda em telas maiores que 48em */
+        margin-left: 2em; /* Adicione margem à esquerda em telas maiores que 48em */
+    }
+
+    .header_nav{
+        display: block;
+        background-color: initial;
+    }
+
+    .header_nav ul{
+       /* margin-right: 2em;*/
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .header_nav li{
+        display: inline-block;
+    }
+
+    .header_nav a{
+        border-radius: 5px;
+    }
+
+    .header_nav a:hover{
+        background-color: color-mix(in srgb, #95c3f4, #ffffff 20%);
+        color: var(--azul-dark);
+    }
+    .footer {
+        flex-direction: row;
+    }
+
+    .header_logo {
+        /* margin-right: auto; Adiciona margem à direita e, portanto, centraliza */
+        display: block; /* Para garantir que a imagem seja tratada como bloco */
+    }
+
+
+    .section4 h1{
+        font-size: 1.8em;
+        margin-bottom: 1em;
+        color: #0187fc;
+        padding: 0.5em;
+    }
+
+    .section1 h1,
+    .section2 h1,
+    .section3 h1,
+    .section5 h1,
+    .section6 h1,
+    .section7 h1,
+    .section8 h1{
+        font-size: 1.8em;
+        margin-bottom: 1em;
+        color: #000080;
+        padding: 0.5em;
+    }
+
+    
+    .section1 p,
+    .section2 p,
+    .section5 p,
+    .section6 p,
+    .section7 p,
+    .section8 p{
+        font-size: 1em;
+        color: #000080;
+        text-align: justify;
+        padding: 1em;
+    }
+
+  
+    .section3 p,
+    .section4 p{
+        font-size: 1em;
+        color: #ffffff;
+        text-align: justify;
+        padding: 1em;
+    }
+
+
+    .section1{
+        width: 100vw;
+        height: 30rem;
+        background: linear-gradient(to bottom, #ffffff, #95c3f4);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: initial;
+        position: relative;
+        text-align: center;
+
+    }
+
+    .section2{
+        width: 100vw;
+        height: 20rem;
+        background: linear-gradient(to bottom, #95c3f4, #0187fc);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: initial;
+        position: relative;
+        text-align: center;
+    }
+
+    .section3{
+        width: 100vw;
+        height: 20rem;
+        background: linear-gradient(to bottom, #0187fc, #000080);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: initial;
+        position: relative;
+        text-align: center;
+    }
+    
+    .section4{
+        width: 100vw;
+        height: 20rem;
+        background: linear-gradient(to bottom, #000080, #0187fc);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: initial;
+        position: relative;
+        text-align: center;
+    }
+
+    .section5{
+        width: 100vw;
+        height: 20rem;
+        background: linear-gradient(to bottom,#0187fc, #95c3f4);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: initial;
+        position: relative;
+        text-align: center;
+    }
+
+    .section6{
+        width: 100vw;
+        height: 140rem;
+        background: linear-gradient(to bottom, #95c3f4, #ffffff);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: initial;
+        position: relative;
+        text-align: center;
+    }
+
+          
+    .section7 div{
+        text-align: center;
+        margin: auto;
+        width: 80%;
+    } 
+    
+
+    .section7{
+        width: 100vw;
+        height: 40rem;
+        background: linear-gradient(to bottom, #ffffff, #95c3f4);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: initial;
+        position: relative;
+        text-align: center;
+    }
+
+
+     /* Estilos para o botão do section7 em telas de tablet e desktop */
+     .section7_botao {
+         display: none; /* Esconder o botão em telas maiores */
+     }
+ 
+     /* Estilos para o iframe em telas de tablet e desktop */
+     .iframeContainer {
+         display: block; /* Exibir o iframe em telas maiores */
+     }
+
+
+    .section8{
+        width: 100vw;
+        height: 15rem;
+        background: linear-gradient(to bottom, #95c3f4, #0187fc);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: initial;
+        position: relative;
+        text-align: center;
+    }
+
+}
+
+
+
+.icon_img{
+    width: 5.5em;
+    transition: transform 0.5s ease; /* Adiciona uma transição suave */
+}
+
+.icon_img:hover {
+    transform: scale(1.2); /* Faz o zoom em 20% (1.2 é 120% do tamanho original) */
+  }
+  
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* Center the cards horizontally */
+
+}
+
+
+.col{
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #000080, #000080, #0187fc, #95c3f4);
+    color: #ffffff;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 1.5rem; 
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    color:  #ffffff;
+    align-items: center; /* Alinhe verticalmente os ícones sociais */
+    height: 100%; /* Preencha a altura do rodapé */
+    flex-direction: row; /* Altere para linha */
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+ .social-icon-img {
+    float: left;
+    width: 8em;
+    padding: 2em;
+    font-size: 1em;
+    transition: transform 0.2s; /* Transição suave ao aplicar o zoom */
+}
+
+.social-icon-img:hover{
+    transform: scale(1.5); /* Aumentará em 1,5 vezes o tamanho original */
+}
+
+
+ 
+.footer_paragrafo{
+    color-scheme: #fdfdfd;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0;
+    font-size: 0.8rem;
+    text-align: center; /* Centraliza o parágrafo */
+    margin-top: 10px; /* Adiciona espaço entre os ícones e o parágrafo */
+}
+
+footer a:visited {
+    color: #ffffff; /* Cor para links visitados */
+}
+
+
+
+/* Configurações da Seção 6 - Projetos */
+.artigo{
+    background-color: white;
+    padding: 1 em;
+    text-align: justify;
+    height: 12em;
+}
+
+
+.artigo-cabecalho{
+    background-color: #000080;
+    color: #0187fc;
+    text-align:center;
+    margin: 0 auto 0 auto;
+}
+
+.img-html{
+    float: left;
+    width: 20rem;
+    padding: 2em;
+    transition: transform 0.2s; /* Transição suave ao aplicar o zoom */
+    border-radius: 20px; /* Você pode ajustar o valor para controlar o raio das bordas */
+}
+
+.img-html:hover{
+    transform: scale(1.1); /* Aumentará em 1,1 vezes o tamanho original */
+}
+
+/* Configurações da foto da Seção 1 - Quem sou eu */
+
+.img-foto{
+    float: left;
+    width: 15rem;
+    padding: 2em;
+    border-radius: 40px; /* Você pode ajustar o valor para controlar o raio das bordas */
+}
+
+/* Configurações da foto da Seção 8 - Contato */
+
+.section8{
+    width: 100vw;
+    height: 20rem;
+    background: linear-gradient(to bottom, #95c3f4, #0187fc);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: initial;
+    position: relative;
+    text-align: center;
+}
+
+.img-contato{
+    float: left;
+    width: 5em;
+    padding: 2em;
+    font-size: 1em;
+    transition: transform 0.2s; /* Transição suave ao aplicar o zoom */
+}
+
+.img-contato:hover{
+    transform: scale(1.5); /* Aumentará em 1,5 vezes o tamanho original */
+}
