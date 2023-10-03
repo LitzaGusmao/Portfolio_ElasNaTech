@@ -540,6 +540,7 @@ footer a:visited {
         color: var(--azul-dark);
         padding: 0.5em;
         height: auto;
+        text-align: center;
     }
 
     
@@ -575,8 +576,7 @@ footer a:visited {
         background-repeat: no-repeat;
         background-color: initial;
         position: relative;
-        text-align: justify;
-
+        text-align: center;
     }
 
     .section2{
