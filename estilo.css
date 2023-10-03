@@ -72,9 +72,9 @@ ul{
 
 a {
     color: var (var(--azul-claro));
-    font-size: .4em;
+    font-size: .7em;
+    text-decoration: none;
 }
-
 
 #hamburguer{
     background-color: var(--azul-dark);
@@ -176,11 +176,12 @@ video {
 footer {
     bottom: 0;
     left: 0;
-    width: 100%;
+    max-width: 100%;
     background-color: var(--azul-dark);
     color: #ffffff;
     text-align: center;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
+    padding: 1em 0 1em 0;
 }
 
 .footer {
@@ -191,7 +192,6 @@ footer {
     height: 100%; 
     flex-direction: row; 
     font-size: 1rem;
-    padding: .5rem;
 }
 
 .social-icon {
@@ -199,16 +199,13 @@ footer {
 }
 
 .social-icon img {
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
 }
-
-
 
  .social-icon-img {
     float: left;
     width: 8em;
-    padding: 2em;
     font-size: 1em;
     transition: transform 0.2s;
 }
@@ -342,7 +339,7 @@ footer a:visited {
 
 .img-contato{
     float: left;
-    width: 4em;
+    width: 3em;
     padding: 2em;
     font-size: 1em;
     transition: transform 0.2s;
@@ -366,7 +363,7 @@ footer a:visited {
     }
 
     .social-icon {
-        margin: 0.8em 0;
+        margin: 0.8em;
     }
     
     .img-foto,
@@ -439,13 +436,12 @@ footer a:visited {
     .section5 p,
     .section6 p,
     .section7 p,
-    .section8 p {
+    .section8 p{
         font-size: 0.9em;
         color: var(--azul-dark);
         height: auto;
-        width: 100%;
+        padding: 1em;
         text-align: justify;
-
     }
 
     .section8{
@@ -473,7 +469,7 @@ footer a:visited {
 
 
 
-@media screen and (min-width:37em){
+@media screen and (min-width:36em){
 
     #hamburguer{
         display: none;
